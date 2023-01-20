@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="fragments/_Layout :: headAndIncludes(title='Bejelentkezés')"></head>
+    <body style="overflow: hidden">
+        <nav th:replace="fragments/_Layout :: navbarDefault"></nav>
+        <main  id="login" class="container-context col-12">
+            <fieldset class="col-3">
+                <form action="login.php" method="post">
+                    <h2>Bejelentkezés</h2>
+                    <div class="container">
+                        <input class="general-textbox-input col-11" type="text" placeholder="Felhasználónév" name="username" required>
+                        <br>
+                        <input class="general-textbox-input col-11" type="password" placeholder="Jelszó" name="psw" required>
+                        <br>
+                        <button class="general-button-s1" type="submit">Bejelentkezés</button>
+                    </div>
+                </form>
+            </fieldset>
+        </main>
+    </body>
+</html>

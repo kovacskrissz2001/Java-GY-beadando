@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<style>
+    body {padding-left: 50px;}
+    #jo {color:darkseagreen; font-weight: bold}
+    #rossz {color: #d02727; font-weight: bold}
+</style>
+    <head th:replace="fragments/_Layout :: headAndIncludes(title='Kapcsolatfelvétel')"></head>
+    <body>
+        <nav th:replace="fragments/_Layout :: navbarDefault"></nav>
+        <main class="content">
+            <h1>Kapcsolat</h1>
+            <form action="#" th:action="@{/feldolgoz}" th:object="${uzenet}" method="post">
+                <p><textarea placeholder="Ide írja üzenetét" cols="40" rows="5" th:field="*{tartalom}" ></textarea></p>
+                <p><input type="submit" value="Küldés" /> <input type="reset" value="Törlés" /></p>
+                <h3 id="jo" th:text="${ertesites}"></h3>
+                <h3 id="rossz" th:text="${hiba}"></h3>
+            </form>
+        </main>
+    </body>
+</html>

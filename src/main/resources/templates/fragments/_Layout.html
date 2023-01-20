@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <!-- HEADER FRAGMENT -->
+    <head th:fragment="headAndIncludes(title)">
+        <title th:text="${title}"></title>
+        <!-- Webpage metas -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS links -->
+        <link th:href="@{/Site.css}" rel="stylesheet" />
+        <!-- JavaScript links -->
+        <script th:src="@{/jquery-3.6.0.min.js}"></script>
+        <script th:src="@{/JavaScripts.js}"></script>
+    </head>
+    <body>
+    <!-- NAVBAR FRAGMENT -->
+    <nav th:fragment="navbarDefault" class="col-12">
+        <ul class="col-12">
+            <li class="navbar-parts-logo">
+                <img src="https://i.ibb.co/zrWzhf3/Pizza-logo-transparent-PNG.png">
+            </li>
+            <li class="navbar-parts-menu"><a th:href="@{/Index.html}">Főoldal</a></li>
+            <li class="navbar-parts-menu"><a th:href="@{/Shop.html}">Étlap</a></li>
+            <li class="navbar-parts-menu"><a th:href="@{/Contact.html}">Kapcsolatfelvétel</a></li>
+
+            <li class="navbar-parts-menu" sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/Admin.html}">Admin oldal</a></li>
+            <li sec:authorize="isAnonymous()" style="float: right; margin-right: 30px"><a th:href="@{/regisztral}" class="general-button-s1">Regisztráció</a></li>
+            <li sec:authorize="isAnonymous()" style="float: right; margin-right: 15px"><a th:href="@{/login}" class="general-button-s1">Bejelentkezés</a></li>
+            <li sec:authorize="isAuthenticated()" style="float: right; margin-right: 15px"><a th:href="@{/logout}" class="general-button-s1">Kijelentkezés</a></li>
+            <div sec:authorize="isAuthenticated()" style="float: right;font-weight: bold; background-color: bisque; margin: 0 0; color: #5db600; width: auto">
+                &nbsp;&nbsp;<span sec:authentication="principal.username">User</span>&nbsp;&nbsp;
+            </div>
+            <div sec:authorize="isAnonymous()" style="float: right; margin: 0 0; background-color: saddlebrown; color: white; width: auto">
+                &nbsp;&nbsp;<span>Vendég</span>&nbsp;&nbsp;
+            </div>
+        </ul>
+    </nav>
+    </body>
+</html>

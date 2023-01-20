@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="fragments/_Layout :: headAndIncludes(title='Főoldal')"></head>
+    <body style="overflow: hidden">
+        <nav th:replace="fragments/_Layout :: navbarDefault"></nav>
+        <main id="index" class="container-context col-12">
+            <div style="display: inline-block" class="rolunk col-10">
+                <p>
+                    <h2>Kizárólag a legjobb minőségű alapanyagokat használjuk.</h2>
+                    <br>
+                    <h3>Az eredmény olyan íz, amire büszkék vagyunk.</h3>
+                    <br>
+                    <span>
+                        Legyen szó, pizzákról, tésztaételekről, rizottókról, levesekről, magyaros ételekről, frissensültekről, halakról, salátákról, desszertekről, mi csak a legjobbat visszük otthonába
+                    </span>
+                    <br>
+                    <br>
+                    <br>
+                    <span>
+                        Szerettünk volna egy olyan helyet, ahová az emberek szívesen betérnek, ahol finom ételeket és italokat fogyaszthatnak. Számunkra az a legfontosabb, hogy minőségi olasz alapanyagból finom ételeket készítsünk, melyekkel el tudjuk nyerni vendégeink bizalmát, elégedettségét, így reméljük, hogy újra visszatérnek majd hozzánk.
+                        A MiKicsi Pizzériában egy igazi olasz, mediterrán hangulatot szeretnénk megidézni. A régióban egyedülálló, olasz kemencénkkel és séfjeink kiváló szakértelmével gondoskodunk az autentikus olasz ízekről, a mennyei ételekről! Számunkra nincs fontosabb, mint a minőség és a vendégek elégedettsége!
+                    </span>
+                </p>
+            </div>
+            <div style="display: inline-block" class="multi">
+                <div class="multibal">
+                    <a class="multigomb" th:href="@{/Shop.html}">Pizzáink</a>
+                </div>
+                <div class="multikozep">
+                    <a class="multigomb" th:href="@{/Contact.html}">Lépj velünk kapcsoaltba</a>
+                </div>
+                <div class="multijobb">
+                    <a class="multigomb" href="https://segelyszervezet.hu/kampanyok/haboru-ukrajnaban/">Segítsen az ukrán háború menekültjeinek</a>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,341 @@
+/*==========================================================================*/
+/*RESZPONZIVITÁSHOZ*/
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+/*==========================================================================*/
+/*GENERAL DOLGOK*/
+* {
+    list-style: none;
+    color: #e8b20f;
+    font-family: 'Segoe UI';
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+html, body {
+    background-color: #3c3f41;
+}
+.container-context {
+    height: 150%;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    flex-grow: 1;
+}
+.nooverflow {
+    overflow: hidden;
+}
+/*==========================================================================*/
+/*NAVBAR*/
+nav {
+    height: 70px;
+    line-height: 70px;
+    background-color: #313335;
+    border-bottom: 1px inset #37393b;
+    box-shadow: 2px 2px 30px #2b2b2b;
+    color: #e7b02d;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+nav a, a:visited, a::after {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s all;
+    padding: 0px 15px 0px 15px;
+}
+nav ul {
+    height: inherit;
+    list-style: none;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+}
+nav ul li {
+    float: left;
+}
+nav ul li img {
+    width: 100px;
+    height: inherit;
+    margin: 0px 20px 0px 20px;
+}
+.navbar-parts-logo {
+    height:inherit;
+}
+.navbar-parts-menu:hover {
+    box-shadow: inset 0px -3px 0px 0px #dc2712;
+    transition: all 0.3s;
+    color: #dc2712;
+}
+.navbar-parts-menu:hover > a{
+    color: #dc2712;
+}
+/*==========================================================================*/
+/*LOFIN OLDAL*/
+#login fieldset {
+    background: #313335;
+    border: 1px solid #e7b02d;
+    border-radius: 50px;
+    filter: none;
+    box-shadow: 2px 2px 30px #2b2b2b;
+    padding: 20px 50px 20px 50px;
+    margin: 12% auto 0px auto;
+}
+#login fieldset div {
+    padding: 15px;
+}
+#login fieldset span {
+    color:#888888;
+    float: right;
+    margin-right: -20px;
+}
+/*==========================================================================*/
+/*SIGNUP OLDAL*/
+#signup fieldset {
+    background: #313335;
+    border: 1px solid #e7b02d;
+    border-radius: 50px;
+    filter: none;
+    box-shadow: 2px 2px 30px #2b2b2b;
+    padding: 20px 50px 20px 50px;
+    margin: 12% auto 0px auto;
+}
+#signup fieldset div {
+    padding: 15px;
+}
+#signup fieldset span {
+    color:#888888;
+    float: right;
+    margin-right: -20px;
+}
+/*==========================================================================*/
+/*CONTACT OLDAL*/
+#contact::before {
+    content: " ";
+    height: 100%;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGlicmFyeXxlbnwwfHwwfHw%3D&w=1000&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(5%);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#contact div {
+    background-image: linear-gradient(#ffffff, #f1f1f1);
+    border: inherit;
+    border-radius: 50px;
+    filter: none;
+    box-shadow: 2px 2px 30px #cacaca;
+    padding: 20px 50px 20px 50px;
+    margin: 30px auto 0px auto;
+}
+#contact h3 {
+    margin: 10px 10px 10px 10px;
+}
+#contact div div {
+    background-image: linear-gradient(#ffffff, #f1f1f1);
+    border: inherit;
+    border-radius: 30px;
+    filter: none;
+    box-shadow: 2px 2px 10px #dfdfdf;
+    color: #303030;
+    font-weight: bold;
+    padding: 20px 50px 20px 50px;
+    margin: -40px auto 0px auto;
+    float: right;
+}
+/*==========================================================================*/
+/*INDEX OLDAL*/
+#index::before {
+    content: " ";
+    height: 100%;
+    width: 100%;
+    background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/08/b3/38/cf/pizza-milano.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(5%);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#index .rolunk, .multibal, .multijobb, .multikozep {
+    background: #313335;
+    border: 1px solid #e7b02d;
+    border-radius: 50px;
+    filter: none;
+    box-shadow: 2px 2px 30px #2b2b2b;
+    text-align: center;
+    padding: 20px 50px 20px 50px;
+    margin: 4% auto 0px auto;
+}
+.rolunk {
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    width: 90%;
+    height: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.rolunk p {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+.multi {
+    float: left;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: center;
+}
+.multibal {
+    background: url('https://cdn.portfolio.hu/articles/images-lg/m/e/g/megvadulsz-ha-meglatod-mennyi-fagyasztott-pizza-fogyott-1-ev-alatt-nalunk-295599.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    border: 5px solid #e7b02d;
+    position: absolute;
+    left: 0%;
+    transform: translate(2%, 0%);
+    padding: 10px;
+    width: 30%;
+    height: 300px;
+    transition: 0.3s all;
+}
+.multikozep {
+    background: url('https://www.jamiespizzeria.hu/kep/1280x665/31918.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    border: 5px solid #e7b02d;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    padding: 10px;
+    text-decoration: none;
+    width: 30%;
+    height: 300px;
+    transition: 0.3s all;
+}
+.multijobb {
+    background: url('https://c.ndtvimg.com/2022-03/u4tev5e8_ukraine-war_625x300_06_March_22.jpg?im=Resize=(1230,900)');
+    background-size:cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    border: 5px solid #e7b02d;
+    float: right;
+    transform: translate(0%, 0%);
+    padding: 10px;
+    text-decoration: none;
+    width: 30%;
+    height: 300px;
+    transition: 0.3s all;
+}
+.multigomb {
+    border-radius: 50px;
+    padding: 10px 20px 10px 20px;
+    position: relative;
+    top: 50%;
+    text-decoration: none;
+    background-color: #e7b02d;
+    color: whitesmoke;
+}
+.multigomb:visited {
+    color: whitesmoke;
+}
+.multijobb:hover, .multibal:hover {
+    transform: scale(1.05);
+}
+.multikozep:hover {
+    transform: translate(-50%, 0%) scale(1.05);
+}
+/*==========================================================================*/
+/*LOGIN OLDAL*/
+.login {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #F1F1F1;
+    background-color: #c2bbb5;
+    padding: 10px;
+    width: 40%;
+}
+input.form {
+    display: inline-block;
+    margin: 5px 0px 5px 0px;
+    width: 50%;
+    border: 1px solid #ccc;
+}
+/*==========================================================================*/
+button {
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    margin: 8px 0;
+
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.8;
+}
+.general-textbox-input {
+    border: 2px solid #e2e2e2;
+    border-radius: 20px;
+    height: 35px;
+    outline: 0;
+    color: #888888;
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    display: inline-block;
+    padding-left: 20px;
+    margin: 5px 0px 5px 0px;
+}
+.general-textbox-input::placeholder {
+    color: #888888;
+}
+.general-button-s1 {
+    background-color: #e7b02d;
+    border: 2px solid #e1b048;
+    border-radius: 20px;
+    width: auto;
+    transition: 0.3s all;
+    color: whitesmoke;
+    font-family: inherit;
+    font-size: 14px;
+    letter-spacing: inherit;
+    padding: 10px 15px 10px 15px;
+}
+.general-button-s1:visited{
+    color: whitesmoke;
+}
+.general-button-s1:hover {
+    background-color: #dc2712;
+    border: 2px solid #e82d1a;
+}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
+<head th:replace="fragments/_Layout :: headAndIncludes(title='Kapcsolatfelvétel')">
+  <meta charset="UTF-8">
+  <title>Regisztrációs hiba</title>
+</head>
+<body>
+<nav th:replace="fragments/_Layout :: navbarDefault"></nav>
+<h1 th:text="${uzenet}" />
+<a href="/regisztral">Próbálja újra.</a>
+</body>
+</html>

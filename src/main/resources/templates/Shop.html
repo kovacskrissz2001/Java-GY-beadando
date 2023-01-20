@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="fragments/_Layout :: headAndIncludes(title='Étlap')"></head>
+    <body>
+        <nav th:replace="fragments/_Layout :: navbarDefault"></nav>
+        <main class="content">
+            <table>
+                <thead class="table-header">
+                    <td>Pizza</td>
+                    <td>Kategória</td>
+                    <td>Vegetáriánus</td>
+                </thead>
+                <tbody class="summary-table-table">
+                <tr th:each="pizza : ${pizzak}">
+                    <td th:text="${pizza.getNev()}"></td>
+                    <td th:text="${pizza.getKategorianev()}"></td>
+                    <td th:text="${pizza.isVegetarianus()}"></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </main>
+    </body>
+</html>
